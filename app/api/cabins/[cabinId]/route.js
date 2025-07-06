@@ -1,0 +1,25 @@
+import { getBookedDatesByCabinId, getCabin } from "@/app/_lib/data-service";
+
+export async function GET(request, { params }) {
+  const { cabinId } = params;
+
+  try {
+    const [cabin, bookedDates] = await Promise.all([
+      getCabin(cabinId),
+      getBookedDatesByCabinId(cabinId),
+    ]);
+    return Response.json({
+      message: "This is a placeholder for the API route.",
+      status: "success",
+      cabin: cabin,
+      bookedDates: bookedDates,
+    });
+  } catch (error) {
+    return Response.json(
+      { message: "Error fetching cabin data" },
+      { status: 500 }
+    );
+  }
+}
+
+// export async function POST() {}
