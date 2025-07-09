@@ -13,10 +13,9 @@ import "@/app/_styles/globals.css";
 import { ReservationProvider } from "./_components/ReservationContext";
 
 export const metadata = {
-  // title: "The Wild Oasis",
   title: {
-    default: "The Wild Oasis",
-    template: "%s | The Wild Oasis",
+    default: "The Azure Oasis",
+    template: "%s | The Azure Oasis",
   },
   descriptions:
     "Luxurious cabin hotel, located in the heart of the Italian Dolomites, surrounded by beautiful mountains and dark forests. Experience the perfect blend of nature and comfort.",
